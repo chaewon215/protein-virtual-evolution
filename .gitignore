@@ -1,0 +1,50 @@
+# =========================
+# Dataset
+# =========================
+data/raw/*
+data/processed/*
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# =========================
+# Model weights / embeddings
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.so
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Environment
+# =========================
+.env
+.venv/
+venv/
+
+# =========================
+# OS / IDE
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
