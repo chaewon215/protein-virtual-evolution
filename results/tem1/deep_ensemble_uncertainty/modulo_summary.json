@@ -1,0 +1,39 @@
+{
+  "split": "modulo",
+  "fold_column": "fold_modulo_5",
+  "model": "Deep Ensemble MLP",
+  "input_feature": "wt_local + delta_local",
+  "input_dim": 1920,
+  "single_member_architecture": [
+    1920,
+    512,
+    128,
+    1
+  ],
+  "single_member_parameters": 1049345,
+  "ensemble_size": 5,
+  "ensemble_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "uncertainty_definition": "sample standard deviation across ensemble member predictions",
+  "epoch_source": "/var/workspace/chaewon/protein-virtual-evolution/results/tem1/mlp_generalization_robust/modulo_fold_metrics.csv",
+  "prediction": {
+    "spearman": 0.7798302072095478,
+    "spearman_p": 0.0,
+    "rmse": 0.7915367776454154,
+    "mae": 0.5728271227045371,
+    "r2": 0.527515242931406
+  },
+  "uncertainty": {
+    "uncertainty_error_spearman": 0.4249047183390976,
+    "uncertainty_error_spearman_p": 3.144159236480722e-218,
+    "high_error_threshold": 0.9911431992119141,
+    "high_error_auroc": 0.5953531031031032,
+    "mean": 0.12889694274825195,
+    "median": 0.11649547889828682
+  }
+}

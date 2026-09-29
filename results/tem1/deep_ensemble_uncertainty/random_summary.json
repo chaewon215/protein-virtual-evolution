@@ -1,0 +1,39 @@
+{
+  "split": "random",
+  "fold_column": "fold_random_5",
+  "model": "Deep Ensemble MLP",
+  "input_feature": "wt_local + delta_local",
+  "input_dim": 1920,
+  "single_member_architecture": [
+    1920,
+    512,
+    128,
+    1
+  ],
+  "single_member_parameters": 1049345,
+  "ensemble_size": 5,
+  "ensemble_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "uncertainty_definition": "sample standard deviation across ensemble member predictions",
+  "epoch_source": "/var/workspace/chaewon/protein-virtual-evolution/results/tem1/mlp_random5/fold_metrics.csv",
+  "prediction": {
+    "spearman": 0.9167171294825789,
+    "spearman_p": 0.0,
+    "rmse": 0.4426553128091673,
+    "mae": 0.2974908483247791,
+    "r2": 0.8522331664021237
+  },
+  "uncertainty": {
+    "uncertainty_error_spearman": 0.5071247755062278,
+    "uncertainty_error_spearman_p": 0.0,
+    "high_error_threshold": 0.5117871059049073,
+    "high_error_auroc": 0.6864455705705705,
+    "mean": 0.1177308352462227,
+    "median": 0.11054795980453491
+  }
+}

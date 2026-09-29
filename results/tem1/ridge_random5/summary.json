@@ -1,0 +1,27 @@
+{
+  "model": "Ridge",
+  "alpha": 1.0,
+  "feature_set": [
+    "wt_local",
+    "delta_local",
+    "delta_global"
+  ],
+  "feature_dim": 2880,
+  "split": "fold_random_5",
+  "fold_mean": {
+    "spearman": 0.8524491278407034,
+    "rmse": 0.6190169974239896,
+    "r2": 0.7106371361464189
+  },
+  "fold_std": {
+    "spearman": 0.008468455880425678,
+    "rmse": 0.020578164870412256,
+    "r2": 0.018589562811806893
+  },
+  "global_oof": {
+    "spearman": 0.8524772462469588,
+    "spearman_p": 0.0,
+    "rmse": 0.619328187067404,
+    "r2": 0.7107407222187097
+  }
+}

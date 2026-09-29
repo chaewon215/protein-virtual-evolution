@@ -1,0 +1,37 @@
+{
+  "model": "MLP",
+  "input_feature": "wt_local + delta_local",
+  "input_dim": 1920,
+  "hidden_dims": [
+    512,
+    128
+  ],
+  "output_dim": 1,
+  "activation": "ReLU",
+  "dropout": 0.2,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 128,
+  "max_epochs": 300,
+  "patience": 20,
+  "seed": 42,
+  "trainable_parameters": 1049345,
+  "split": "fold_random_5",
+  "fold_mean": {
+    "spearman": 0.9113547095405604,
+    "rmse": 0.4591832708574305,
+    "r2": 0.8408869430413585
+  },
+  "fold_std": {
+    "spearman": 0.005567472749000043,
+    "rmse": 0.009099750953836777,
+    "r2": 0.005016372703869162
+  },
+  "global_oof": {
+    "spearman": 0.9107020662069957,
+    "spearman_p": 0.0,
+    "rmse": 0.4594364329641032,
+    "r2": 0.8408170796304779
+  }
+}
