@@ -1,0 +1,50 @@
+{
+  "stage": "Step 11-3",
+  "protein": "TPMT",
+  "external_validation": true,
+  "tpmt_specific_hyperparameter_tuning": false,
+  "feature_shape": [
+    3648,
+    2880
+  ],
+  "architecture": "Frozen GFP BranchFusionMLP",
+  "training_protocol": {
+    "epochs": 24,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2
+  },
+  "results": [
+    {
+      "split": "random",
+      "spearman_mean": 0.5667583579219191,
+      "spearman_std": 0.01482461706472497,
+      "rmse_mean": 0.2721052517050686,
+      "rmse_std": 0.0089971018592382,
+      "mae_mean": 0.20387971188831827,
+      "mae_std": 0.00513068570552182,
+      "r2_mean": 0.41257336634952635,
+      "r2_std": 0.032237682321676585,
+      "global_spearman": 0.5659677702414874,
+      "global_rmse": 0.27222801414439907,
+      "global_mae": 0.20388216597339848,
+      "global_r2": 0.4127798584786949
+    },
+    {
+      "split": "position",
+      "spearman_mean": 0.47238410853571483,
+      "spearman_std": 0.05419943502148836,
+      "rmse_mean": 0.2994912971692525,
+      "rmse_std": 0.013787070088413919,
+      "mae_mean": 0.23157249497178606,
+      "mae_std": 0.012734359122016143,
+      "r2_mean": 0.2710661878466965,
+      "r2_std": 0.08789855839587661,
+      "global_spearman": 0.47496381785387354,
+      "global_rmse": 0.2997306902184704,
+      "global_mae": 0.231560107198065,
+      "global_r2": 0.2881348358813557
+    }
+  ]
+}

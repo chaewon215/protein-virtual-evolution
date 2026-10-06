@@ -1,0 +1,37 @@
+{
+  "split": "position",
+  "fold_column": "fold_position_5",
+  "n_samples": 3648,
+  "feature_shape": [
+    3648,
+    2880
+  ],
+  "architecture": "BranchFusionMLP: 960->64 x3, concat 192->64->1",
+  "parameters": 196929,
+  "training": {
+    "epochs": 24,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2,
+    "tpmt_specific_hyperparameter_tuning": false
+  },
+  "fold_mean": {
+    "spearman": 0.47238410853571483,
+    "rmse": 0.2994912971692525,
+    "mae": 0.23157249497178606,
+    "r2": 0.2710661878466965
+  },
+  "fold_std": {
+    "spearman": 0.05419943502148836,
+    "rmse": 0.013787070088413919,
+    "mae": 0.012734359122016143,
+    "r2": 0.08789855839587661
+  },
+  "global_oof": {
+    "spearman": 0.47496381785387354,
+    "rmse": 0.2997306902184704,
+    "mae": 0.231560107198065,
+    "r2": 0.2881348358813557
+  }
+}

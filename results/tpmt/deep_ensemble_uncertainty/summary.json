@@ -1,0 +1,30 @@
+{
+  "stage": "Step 11-4",
+  "protein": "TPMT",
+  "external_validation": true,
+  "tpmt_specific_hyperparameter_tuning": false,
+  "results": [
+    {
+      "split": "random",
+      "spearman": 0.5754609067733346,
+      "rmse": 0.2644587707464276,
+      "mae": 0.19786634800131941,
+      "r2": 0.44581947075680006,
+      "mean_uncertainty": 0.06257446095928557,
+      "uncertainty_error_rho": 0.08219191431033997,
+      "high_error_auroc": 0.5593289642934267,
+      "high_error_threshold": 0.30901180091269836
+    },
+    {
+      "split": "position",
+      "spearman": 0.5111036078049025,
+      "rmse": 0.2885391727255845,
+      "mae": 0.22162509052007684,
+      "r2": 0.3403024399576049,
+      "mean_uncertainty": 0.06621090067725784,
+      "uncertainty_error_rho": 0.0998777743986135,
+      "high_error_auroc": 0.5683659289999717,
+      "high_error_threshold": 0.3543550789623413
+    }
+  ]
+}

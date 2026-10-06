@@ -1,0 +1,37 @@
+{
+  "split": "random",
+  "fold_column": "fold_random_5",
+  "n_samples": 3648,
+  "feature_shape": [
+    3648,
+    2880
+  ],
+  "architecture": "BranchFusionMLP: 960->64 x3, concat 192->64->1",
+  "parameters": 196929,
+  "training": {
+    "epochs": 24,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2,
+    "tpmt_specific_hyperparameter_tuning": false
+  },
+  "fold_mean": {
+    "spearman": 0.5667583579219191,
+    "rmse": 0.2721052517050686,
+    "mae": 0.20387971188831827,
+    "r2": 0.41257336634952635
+  },
+  "fold_std": {
+    "spearman": 0.01482461706472497,
+    "rmse": 0.0089971018592382,
+    "mae": 0.00513068570552182,
+    "r2": 0.032237682321676585
+  },
+  "global_oof": {
+    "spearman": 0.5659677702414874,
+    "rmse": 0.27222801414439907,
+    "mae": 0.20388216597339848,
+    "r2": 0.4127798584786949
+  }
+}

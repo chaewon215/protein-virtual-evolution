@@ -1,0 +1,84 @@
+{
+  "stage": "Step 11-5-v2",
+  "hardcoded_metric_values": false,
+  "all_metrics_recomputed_from_oof_predictions": true,
+  "risk_coverage_protocol": {
+    "coverages": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "random_repeats": 1000,
+    "random_seed": 42
+  },
+  "sources": [
+    {
+      "protein": "TEM-1",
+      "split": "random",
+      "source_oof_file": "results/tem1/deep_ensemble_uncertainty/random_oof_predictions.csv",
+      "n_rows": 4996,
+      "truth_column": "DMS_score",
+      "mu_column": "ensemble_mean",
+      "sigma_column": "ensemble_std",
+      "member_columns": "member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction|member_5_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    },
+    {
+      "protein": "TEM-1",
+      "split": "modulo",
+      "source_oof_file": "results/tem1/deep_ensemble_uncertainty/modulo_oof_predictions.csv",
+      "n_rows": 4996,
+      "truth_column": "DMS_score",
+      "mu_column": "ensemble_mean",
+      "sigma_column": "ensemble_std",
+      "member_columns": "member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction|member_5_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    },
+    {
+      "protein": "TEM-1",
+      "split": "contiguous",
+      "source_oof_file": "results/tem1/deep_ensemble_uncertainty/contiguous_oof_predictions.csv",
+      "n_rows": 4996,
+      "truth_column": "DMS_score",
+      "mu_column": "ensemble_mean",
+      "sigma_column": "ensemble_std",
+      "member_columns": "member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction|member_5_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    },
+    {
+      "protein": "GFP",
+      "split": "random",
+      "source_oof_file": "results/gfp/deep_ensemble_uncertainty/oof_predictions.csv",
+      "n_rows": 1084,
+      "truth_column": "DMS_score",
+      "mu_column": "ensemble_mean",
+      "sigma_column": "ensemble_std",
+      "member_columns": "member_0_prediction|member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    },
+    {
+      "protein": "TPMT",
+      "split": "random",
+      "source_oof_file": "results/tpmt/deep_ensemble_uncertainty/random/oof_predictions.csv",
+      "n_rows": 3648,
+      "truth_column": "DMS_score",
+      "mu_column": "predicted_fitness_mu",
+      "sigma_column": "uncertainty_sigma",
+      "member_columns": "member_0_prediction|member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    },
+    {
+      "protein": "TPMT",
+      "split": "position",
+      "source_oof_file": "results/tpmt/deep_ensemble_uncertainty/position/oof_predictions.csv",
+      "n_rows": 3648,
+      "truth_column": "DMS_score",
+      "mu_column": "predicted_fitness_mu",
+      "sigma_column": "uncertainty_sigma",
+      "member_columns": "member_0_prediction|member_1_prediction|member_2_prediction|member_3_prediction|member_4_prediction",
+      "prediction_source": "explicit_mu_sigma"
+    }
+  ]
+}

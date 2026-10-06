@@ -1,0 +1,83 @@
+{
+  "split": "position",
+  "prediction": {
+    "spearman": 0.5111036078049025,
+    "rmse": 0.2885391727255845,
+    "mae": 0.22162509052007684,
+    "r2": 0.3403024399576049
+  },
+  "uncertainty": {
+    "mean_uncertainty": 0.06621090067725784,
+    "uncertainty_error_rho": 0.0998777743986135,
+    "high_error_auroc": 0.5683659289999717,
+    "high_error_threshold": 0.3543550789623413
+  },
+  "member_prediction_shape": [
+    3648,
+    5
+  ],
+  "mu_shape": [
+    3648
+  ],
+  "sigma_shape": [
+    3648
+  ],
+  "tpmt_specific_hyperparameter_tuning": false,
+  "risk_coverage": [
+    {
+      "coverage": 0.2,
+      "subset_n": 729,
+      "uncertainty_selected_rmse": 0.26261466530688565,
+      "random_rmse_mean": 0.2883003779713247,
+      "random_ci_low": 0.2726450827201276,
+      "random_ci_high": 0.30477539561383615,
+      "oracle_rmse": 0.037465502441986535,
+      "rmse_reduction_vs_random": 0.08909357956857697,
+      "random_percentile": 0.001
+    },
+    {
+      "coverage": 0.4,
+      "subset_n": 1459,
+      "uncertainty_selected_rmse": 0.26592598593068845,
+      "random_rmse_mean": 0.2884807795635428,
+      "random_ci_low": 0.2790997305583136,
+      "random_ci_high": 0.2984211269046906,
+      "oracle_rmse": 0.07668137729315531,
+      "rmse_reduction_vs_random": 0.0781847361442195,
+      "random_percentile": 0.0
+    },
+    {
+      "coverage": 0.6,
+      "subset_n": 2188,
+      "uncertainty_selected_rmse": 0.27628629853324443,
+      "random_rmse_mean": 0.2885470760625493,
+      "random_ci_low": 0.2821600373411862,
+      "random_ci_high": 0.2946676846430148,
+      "oracle_rmse": 0.12062852774647909,
+      "rmse_reduction_vs_random": 0.042491428770004475,
+      "random_percentile": 0.0
+    },
+    {
+      "coverage": 0.8,
+      "subset_n": 2918,
+      "uncertainty_selected_rmse": 0.2813021070752566,
+      "random_rmse_mean": 0.2885550680467735,
+      "random_ci_low": 0.28461302123136245,
+      "random_ci_high": 0.29233663851569863,
+      "oracle_rmse": 0.1761580942320872,
+      "rmse_reduction_vs_random": 0.02513544822002996,
+      "random_percentile": 0.002
+    },
+    {
+      "coverage": 1.0,
+      "subset_n": 3648,
+      "uncertainty_selected_rmse": 0.2885391727255845,
+      "random_rmse_mean": 0.2885391727255845,
+      "random_ci_low": 0.2885391727255845,
+      "random_ci_high": 0.2885391727255845,
+      "oracle_rmse": 0.2885391727255845,
+      "rmse_reduction_vs_random": 0.0,
+      "random_percentile": 1.0
+    }
+  ]
+}
