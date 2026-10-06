@@ -8,6 +8,10 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
+# Large experiment outputs
+results/**/**_oof_predictions.csv
+results/**/random_selection_repeats.csv
+
 # =========================
 # Model weights / embeddings
 # =========================
