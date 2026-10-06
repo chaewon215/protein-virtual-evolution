@@ -1,0 +1,72 @@
+[
+  {
+    "feature_set": "wt_local",
+    "feature_dim": 960,
+    "fold_mean_spearman": 0.7602476708286044,
+    "fold_std_spearman": 0.005422317523765547,
+    "fold_mean_rmse": 0.7448714042087243,
+    "fold_std_rmse": 0.017095897376656583,
+    "fold_mean_r2": 0.5811875457017239,
+    "fold_std_r2": 0.018533353219128523,
+    "global_oof_spearman": 0.7593028407702102,
+    "global_oof_spearman_p": 0.0,
+    "global_oof_rmse": 0.7452124347094184,
+    "global_oof_r2": 0.5812008504821268
+  },
+  {
+    "feature_set": "mut_local",
+    "feature_dim": 960,
+    "fold_mean_spearman": 0.8617515943543417,
+    "fold_std_spearman": 0.005103257367137919,
+    "fold_mean_rmse": 0.5853953402231848,
+    "fold_std_rmse": 0.009923254595406328,
+    "fold_mean_r2": 0.741344932766747,
+    "fold_std_r2": 0.009216619829805092,
+    "global_oof_spearman": 0.86184307953959,
+    "global_oof_spearman_p": 0.0,
+    "global_oof_rmse": 0.5856335958859576,
+    "global_oof_r2": 0.7413588808931635
+  },
+  {
+    "feature_set": "delta_local",
+    "feature_dim": 960,
+    "fold_mean_spearman": 0.8296515297196784,
+    "fold_std_spearman": 0.006321886483831951,
+    "fold_mean_rmse": 0.6417303330815578,
+    "fold_std_rmse": 0.017202061372156234,
+    "fold_mean_r2": 0.6890146158720437,
+    "fold_std_r2": 0.017796200370325567,
+    "global_oof_spearman": 0.8299709194116455,
+    "global_oof_spearman_p": 0.0,
+    "global_oof_rmse": 0.6422742183153821,
+    "global_oof_r2": 0.6889096184414202
+  },
+  {
+    "feature_set": "wt_local_delta_local",
+    "feature_dim": 1920,
+    "fold_mean_spearman": 0.8664876804094058,
+    "fold_std_spearman": 0.0041563907316448856,
+    "fold_mean_rmse": 0.5760816610354125,
+    "fold_std_rmse": 0.010057827461024618,
+    "fold_mean_r2": 0.7495101378060742,
+    "fold_std_r2": 0.009061314366978965,
+    "global_oof_spearman": 0.8665417855867913,
+    "global_oof_spearman_p": 0.0,
+    "global_oof_rmse": 0.5761949373694835,
+    "global_oof_r2": 0.7496287363161906
+  },
+  {
+    "feature_set": "full",
+    "feature_dim": 2880,
+    "fold_mean_spearman": 0.8524432835250971,
+    "fold_std_spearman": 0.008470926129874315,
+    "fold_mean_rmse": 0.6190185455502558,
+    "fold_std_rmse": 0.020579987255991482,
+    "fold_mean_r2": 0.7106356734815662,
+    "fold_std_r2": 0.01859075727409892,
+    "global_oof_spearman": 0.8524740637028345,
+    "global_oof_spearman_p": 0.0,
+    "global_oof_rmse": 0.6193297476269631,
+    "global_oof_r2": 0.7107392644878678
+  }
+]

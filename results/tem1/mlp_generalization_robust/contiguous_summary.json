@@ -1,0 +1,38 @@
+{
+  "split": "contiguous",
+  "fold_column": "fold_contiguous_5",
+  "input_feature": "wt_local + delta_local",
+  "input_dim": 1920,
+  "model": "MLP",
+  "architecture": [
+    1920,
+    512,
+    128,
+    1
+  ],
+  "activation": "ReLU",
+  "dropout": 0.2,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 128,
+  "max_epochs": 300,
+  "patience": 20,
+  "epoch_selection": "median of best epochs from all 4 structured inner validation folds",
+  "fold_mean": {
+    "spearman": 0.778728049178248,
+    "rmse": 0.8382343960432422,
+    "r2": 0.4625868022739522
+  },
+  "fold_std": {
+    "spearman": 0.046489998253550706,
+    "rmse": 0.10368127296787372,
+    "r2": 0.1198785866148093
+  },
+  "global_oof": {
+    "spearman": 0.7696629336599066,
+    "spearman_p": 0.0,
+    "rmse": 0.8434275443213334,
+    "r2": 0.46353528172342806
+  }
+}

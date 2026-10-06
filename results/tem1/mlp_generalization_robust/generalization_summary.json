@@ -1,0 +1,28 @@
+[
+  {
+    "split": "modulo",
+    "fold_column": "fold_modulo_5",
+    "mean_spearman": 0.7798202917049221,
+    "std_spearman": 0.026791294300121896,
+    "mean_rmse": 0.8118212634891073,
+    "std_rmse": 0.04929376586435489,
+    "mean_r2": 0.49696189603672314,
+    "std_r2": 0.0634658741656231,
+    "global_oof_spearman": 0.7709711483588719,
+    "global_oof_rmse": 0.8127860678871498,
+    "global_oof_r2": 0.5018064431789553
+  },
+  {
+    "split": "contiguous",
+    "fold_column": "fold_contiguous_5",
+    "mean_spearman": 0.778728049178248,
+    "std_spearman": 0.046489998253550706,
+    "mean_rmse": 0.8382343960432422,
+    "std_rmse": 0.10368127296787372,
+    "mean_r2": 0.4625868022739522,
+    "std_r2": 0.1198785866148093,
+    "global_oof_spearman": 0.7696629336599066,
+    "global_oof_rmse": 0.8434275443213334,
+    "global_oof_r2": 0.46353528172342806
+  }
+]

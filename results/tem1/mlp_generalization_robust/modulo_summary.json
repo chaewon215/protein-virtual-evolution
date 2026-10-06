@@ -1,0 +1,38 @@
+{
+  "split": "modulo",
+  "fold_column": "fold_modulo_5",
+  "input_feature": "wt_local + delta_local",
+  "input_dim": 1920,
+  "model": "MLP",
+  "architecture": [
+    1920,
+    512,
+    128,
+    1
+  ],
+  "activation": "ReLU",
+  "dropout": 0.2,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 128,
+  "max_epochs": 300,
+  "patience": 20,
+  "epoch_selection": "median of best epochs from all 4 structured inner validation folds",
+  "fold_mean": {
+    "spearman": 0.7798202917049221,
+    "rmse": 0.8118212634891073,
+    "r2": 0.49696189603672314
+  },
+  "fold_std": {
+    "spearman": 0.026791294300121896,
+    "rmse": 0.04929376586435489,
+    "r2": 0.0634658741656231
+  },
+  "global_oof": {
+    "spearman": 0.7709711483588719,
+    "spearman_p": 0.0,
+    "rmse": 0.8127860678871498,
+    "r2": 0.5018064431789553
+  }
+}
