@@ -1,0 +1,31 @@
+{
+  "stage": "Step 9-3",
+  "input_candidates": 47,
+  "eligible_candidates": 29,
+  "shortlist_size": 6,
+  "selection": {
+    "primary_score": "mu - sigma",
+    "require_mu_improvement_vs_seed": true,
+    "require_conservative_improvement_vs_seed": true,
+    "max_sigma": null,
+    "max_per_seed": 1,
+    "max_per_design_position": 2,
+    "pareto_objectives": [
+      "maximize predicted_fitness_mu",
+      "minimize uncertainty_sigma"
+    ]
+  },
+  "shortlist_statistics": {
+    "mu_mean": 4.173899333333334,
+    "sigma_mean": 0.10752518816666667,
+    "conservative_mean": 4.066374316666667,
+    "mean_delta_mu_vs_seed": 0.16776934548848466,
+    "mean_delta_conservative_vs_seed": 0.12764039700730387,
+    "pareto_optimal_count": 2
+  },
+  "artifacts": {
+    "ranked_candidates": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_shortlist/esm3_candidates_ranked.csv",
+    "shortlist": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_shortlist/esm3_candidate_shortlist.csv"
+  },
+  "interpretation": "Shortlist values are model predictions only. No generated candidate has an experimental fitness measurement."
+}

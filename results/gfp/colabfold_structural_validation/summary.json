@@ -1,0 +1,20 @@
+{
+  "n_pairs": 6,
+  "n_structures": 39,
+  "n_pairs_with_self_variability_baseline": 6,
+  "n_pairs_within_self_variability": 5,
+  "metric_definition": {
+    "candidate_seed_rmsd": "C-alpha RMSD after global Kabsch alignment",
+    "self_variability_baseline": "max(median WT self-RMSD, median seed self-RMSD, median candidate self-RMSD)",
+    "excess_over_self_baseline": "median candidate-seed RMSD minus self-variability baseline",
+    "design_position_displacement": "mean C-alpha displacement at seed-to-candidate changed positions after global alignment",
+    "plddt_scale": "ColabFold/AlphaFold PDB B-factor confidence, 0-100"
+  },
+  "interpretation": "This is a cross-model structural consistency / plausibility analysis. It is not experimental validation and does not impose a hard RMSD rejection threshold.",
+  "outputs": {
+    "inventory": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/colabfold_structural_validation/structure_inventory.csv",
+    "replicate_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/colabfold_structural_validation/replicate_metrics.csv",
+    "self_rmsd_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/colabfold_structural_validation/self_rmsd_metrics.csv",
+    "structural_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/colabfold_structural_validation/structural_metrics.csv"
+  }
+}

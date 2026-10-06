@@ -1,0 +1,40 @@
+{
+  "stage": "Step 10-v2",
+  "model": "esm3_sm_open_v1",
+  "sequence_length": 238,
+  "replicate_seeds": [
+    42,
+    43,
+    44
+  ],
+  "n_replicates": 3,
+  "structure_steps": 14,
+  "tensor_shapes": {
+    "raw_coordinates_per_fold": [
+      238,
+      37,
+      3
+    ],
+    "ca_coordinates_per_fold": [
+      238,
+      3
+    ]
+  },
+  "wt_stochastic_baseline": {
+    "self_rmsd_mean": 6.241038489336058,
+    "self_rmsd_median": 6.527544265981235,
+    "mean_plddt": 0.7620368003845215,
+    "mean_ptm": 0.7461437185605367
+  },
+  "interpretation": {
+    "candidate_vs_seed": "Matched-seed candidate-vs-seed structural difference.",
+    "self_variability": "Pairwise RMSD among repeated folds of the same sequence.",
+    "excess_over_self_variability": "Median candidate-vs-seed RMSD minus the larger of seed/candidate self-RMSD medians. Positive values suggest that between-sequence difference exceeds the estimated stochastic folding baseline.",
+    "experimental_validation": false
+  },
+  "artifacts": {
+    "replicate_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility_replicated/replicate_metrics.csv",
+    "aggregate_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility_replicated/aggregate_structural_metrics.csv",
+    "pdb_directory": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility_replicated/pdb"
+  }
+}

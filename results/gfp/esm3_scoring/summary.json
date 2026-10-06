@@ -1,0 +1,70 @@
+{
+  "stage": "Step 9-2",
+  "label_policy": {
+    "experimental_labels_for_generated_candidates": false,
+    "proteingym_multi_mutant_dms_score_loaded": false
+  },
+  "input": {
+    "n_candidates": 47,
+    "sequence_length": 238
+  },
+  "esmc": {
+    "model": "biohub/ESMC-300M",
+    "residue_embedding_shape": [
+      47,
+      238,
+      960
+    ],
+    "wt_context_shape": [
+      47,
+      960
+    ],
+    "delta_local_shape": [
+      47,
+      960
+    ],
+    "delta_global_shape": [
+      47,
+      960
+    ],
+    "final_feature_shape": [
+      47,
+      2880
+    ]
+  },
+  "ensemble": {
+    "members": 5,
+    "member_prediction_shape": [
+      47,
+      5
+    ],
+    "mu_shape": [
+      47
+    ],
+    "sigma_shape": [
+      47
+    ]
+  },
+  "prediction_distribution": {
+    "mu_min": 3.811807155609131,
+    "mu_median": 4.058736324310303,
+    "mu_mean": 4.054941177368164,
+    "mu_max": 4.259368896484375,
+    "sigma_min": 0.03419698402285576,
+    "sigma_median": 0.10030852258205414,
+    "sigma_mean": 0.10066691786050797,
+    "sigma_max": 0.17416846752166748
+  },
+  "seed_comparison": {
+    "n_predicted_mu_improved_vs_seed": 36,
+    "fraction_predicted_mu_improved_vs_seed": 0.7659574468085106,
+    "n_conservative_improved_vs_seed": 29,
+    "fraction_conservative_improved_vs_seed": 0.6170212765957447
+  },
+  "interpretation": "All generated-candidate values are model predictions. They are not experimental fitness measurements.",
+  "artifacts": {
+    "features": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_scoring/esm3_generated_features.pt",
+    "member_predictions": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_scoring/esm3_member_predictions.npy",
+    "scored_candidates": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_scoring/esm3_generated_candidates_scored.csv"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "Step 10",
+  "model": "esm3_sm_open_v1",
+  "sequence_length": 238,
+  "structure_generation_steps": 14,
+  "coordinate_reference": "ESM3-predicted WT structure using the same model",
+  "n_candidates": 6,
+  "wt": {
+    "coordinate_shape": [
+      238,
+      37,
+      3
+    ],
+    "ca_shape": [
+      238,
+      3
+    ],
+    "mean_plddt": 0.7258734107017517,
+    "ptm": 0.6956322193145752,
+    "radius_of_gyration": 17.530094216363793,
+    "ca_clash_count_lt3A": 1
+  },
+  "heuristic_warning_rules": {
+    "candidate_vs_seed_ca_rmsd": "> 2.0 A",
+    "design_position_ca_displacement": "> 3.0 A",
+    "additional_ca_clashes_vs_wt": "> 2",
+    "additional_ca_step_outliers_vs_wt": "> 2"
+  },
+  "interpretation": "Structural metrics are computational plausibility diagnostics only. No experimental structural or fitness validation is implied.",
+  "artifacts": {
+    "metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility/structural_metrics.csv",
+    "final_candidate_report": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility/final_candidate_report.csv",
+    "pdb_directory": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/structural_plausibility/pdb"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "Step 9-1",
+  "method": "ESM3 constrained single-position infilling around high-confidence GFP seed variants",
+  "label_policy": {
+    "multi_mutant_dms_score_loaded": false,
+    "seed_selection": "predicted_fitness_mu - uncertainty_sigma"
+  },
+  "generation": {
+    "model": "esm3_sm_open_v1",
+    "device": "cuda",
+    "temperature": 0.7,
+    "num_steps": 1,
+    "num_seeds": 10,
+    "positions_per_seed": 2,
+    "samples_per_prompt": 3,
+    "planned_attempts": 60,
+    "actual_attempts": 60,
+    "accepted_novel_candidates": 47,
+    "status_counts": {
+      "accepted_novel": 47,
+      "duplicate_generated": 7,
+      "no_change": 6
+    }
+  },
+  "seed_constraints": {
+    "max_seed_mutations": 5,
+    "position_frequency_source_top_n": 500
+  },
+  "artifacts": {
+    "selected_seeds": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_generation/selected_seed_variants.csv",
+    "position_frequency": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_generation/design_position_frequency.csv",
+    "generation_attempts": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_generation/generation_attempts.csv",
+    "accepted_candidates": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/esm3_generation/esm3_generated_candidates.csv"
+  }
+}
