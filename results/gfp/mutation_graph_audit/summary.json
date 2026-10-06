@@ -1,0 +1,270 @@
+{
+  "stage": "Step 8-5.5",
+  "definition": {
+    "edge": "parent -> child if child preserves all parent WT-relative substitutions and adds exactly one additional substitution",
+    "initial_reachable_set": "all observed GFP single mutants",
+    "interpretation_of_unreachable": "No complete strict one-addition path exists within the observed benchmark variant set. This is a benchmark coverage statement, not a claim of biological impossibility.",
+    "uses_dms_score": false
+  },
+  "dataset_counts": {
+    "single_mutants": 1084,
+    "multi_mutants": 50630,
+    "all_variants": 51714,
+    "max_mutation_count": 15
+  },
+  "overall_accessibility": {
+    "reachable_multi_mutants": 16456,
+    "multi_mutant_reachable_fraction": 0.3250246889196129,
+    "double_mutants": 12777,
+    "reachable_double_mutants": 12762,
+    "double_reachable_fraction": 0.9988260154965954
+  },
+  "by_mutation_count": [
+    {
+      "mutation_count": 1,
+      "n_variants": 1084,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": NaN,
+      "n_reachable_from_single": 1084,
+      "fraction_reachable_from_single": 1.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 22.800738007380073,
+      "max_observed_child_count": 133
+    },
+    {
+      "mutation_count": 2,
+      "n_variants": 12777,
+      "n_with_observed_parent": 12762,
+      "fraction_with_observed_parent": 0.9988260154965954,
+      "n_reachable_from_single": 12762,
+      "fraction_reachable_from_single": 0.9988260154965954,
+      "mean_observed_parent_count": 1.9344133990764656,
+      "max_observed_parent_count": 2,
+      "mean_reachable_parent_count": 1.9344133990764656,
+      "mean_observed_child_count": 0.3384988651483134,
+      "max_observed_child_count": 7
+    },
+    {
+      "mutation_count": 3,
+      "n_variants": 12336,
+      "n_with_observed_parent": 3678,
+      "fraction_with_observed_parent": 0.29815175097276264,
+      "n_reachable_from_single": 3678,
+      "fraction_reachable_from_single": 0.29815175097276264,
+      "mean_observed_parent_count": 0.35059987029831385,
+      "max_observed_parent_count": 3,
+      "mean_reachable_parent_count": 0.35059987029831385,
+      "mean_observed_child_count": 0.0026750972762645915,
+      "max_observed_child_count": 1
+    },
+    {
+      "mutation_count": 4,
+      "n_variants": 9387,
+      "n_with_observed_parent": 33,
+      "fraction_with_observed_parent": 0.003515500159795462,
+      "n_reachable_from_single": 16,
+      "fraction_reachable_from_single": 0.001704484925961436,
+      "mean_observed_parent_count": 0.003515500159795462,
+      "max_observed_parent_count": 1,
+      "mean_reachable_parent_count": 0.001704484925961436,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 5,
+      "n_variants": 6825,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 6,
+      "n_variants": 4298,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 7,
+      "n_variants": 2526,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 8,
+      "n_variants": 1364,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 9,
+      "n_variants": 627,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 10,
+      "n_variants": 299,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 11,
+      "n_variants": 118,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 12,
+      "n_variants": 43,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 13,
+      "n_variants": 23,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 14,
+      "n_variants": 5,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    },
+    {
+      "mutation_count": 15,
+      "n_variants": 2,
+      "n_with_observed_parent": 0,
+      "fraction_with_observed_parent": 0.0,
+      "n_reachable_from_single": 0,
+      "fraction_reachable_from_single": 0.0,
+      "mean_observed_parent_count": 0.0,
+      "max_observed_parent_count": 0,
+      "mean_reachable_parent_count": 0.0,
+      "mean_observed_child_count": 0.0,
+      "max_observed_child_count": 0
+    }
+  ],
+  "top_predicted_accessibility": [
+    {
+      "top_n": 10,
+      "n_reachable": 0,
+      "fraction_reachable": 0.0,
+      "mean_mutation_count": 7.8,
+      "mean_mu": 4.08952662,
+      "mean_sigma": 0.130945683
+    },
+    {
+      "top_n": 50,
+      "n_reachable": 1,
+      "fraction_reachable": 0.02,
+      "mean_mutation_count": 6.68,
+      "mean_mu": 4.024028926000001,
+      "mean_sigma": 0.12583897256
+    },
+    {
+      "top_n": 100,
+      "n_reachable": 2,
+      "fraction_reachable": 0.02,
+      "mean_mutation_count": 6.54,
+      "mean_mu": 3.997745893999999,
+      "mean_sigma": 0.1204000233
+    },
+    {
+      "top_n": 500,
+      "n_reachable": 12,
+      "fraction_reachable": 0.024,
+      "mean_mutation_count": 5.822,
+      "mean_mu": 3.9244807001999997,
+      "mean_sigma": 0.109013918312
+    },
+    {
+      "top_n": 1000,
+      "n_reachable": 55,
+      "fraction_reachable": 0.055,
+      "mean_mutation_count": 5.507,
+      "mean_mu": 3.8875264749,
+      "mean_sigma": 0.101766050457
+    }
+  ],
+  "artifacts": {
+    "variant_accessibility": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/mutation_graph_audit/variant_accessibility.csv",
+    "mutation_count_summary": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/mutation_graph_audit/mutation_count_summary.csv",
+    "top_predicted_accessibility": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/mutation_graph_audit/top_predicted_accessibility.csv",
+    "figures": [
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/mutation_graph_audit/figures/reachable_fraction_by_mutation_count.png",
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/mutation_graph_audit/figures/observed_vs_reachable_counts.png"
+    ]
+  }
+}

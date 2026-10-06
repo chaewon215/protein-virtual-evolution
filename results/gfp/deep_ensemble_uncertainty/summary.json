@@ -1,0 +1,215 @@
+{
+  "protocol": {
+    "dataset": "GFP_AEQVI_Sarkisyan_2016",
+    "population": "1084 single mutants only",
+    "multi_mutant_label_usage": "None",
+    "representation": {
+      "wt_context_mean": 960,
+      "delta_local_sum": 960,
+      "delta_global": 960,
+      "total_input_dim": 2880
+    },
+    "model": {
+      "name": "BranchFusionMLP",
+      "architecture": "WT[960]->64; DeltaLocal[960]->64; DeltaGlobal[960]->64; concat[192]->64->1",
+      "parameter_count": 196929
+    },
+    "ensemble_size": 5,
+    "member_base_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "outer_cv": "5-fold shuffled KFold, random_state=42",
+    "epoch_selection": "3-fold inner CV on each outer-train; rounded median of inner best epochs",
+    "uncertainty": "sample standard deviation across 5 ensemble-member predictions in original DMS-score units",
+    "high_error_definition": "exact top 20% of samples by absolute OOF prediction error",
+    "random_baseline_repeats": 1000
+  },
+  "global_oof_prediction": {
+    "spearman": 0.5920952180914638,
+    "rmse": 0.44577283524747585,
+    "mae": 0.23063101167352495,
+    "r2": 0.48620264953462444,
+    "mean_uncertainty": 0.0725234495384499
+  },
+  "global_uncertainty_quality": {
+    "uncertainty_error_spearman": 0.41507108539050713,
+    "high_error_auroc": 0.8429087004820904
+  },
+  "fold_prediction": {
+    "spearman": {
+      "mean": 0.5926572108295751,
+      "std": 0.04620706259609568
+    },
+    "rmse": {
+      "mean": 0.4432530614586286,
+      "std": 0.05249478268960469
+    },
+    "mae": {
+      "mean": 0.23061122735299358,
+      "std": 0.023565144644791994
+    },
+    "r2": {
+      "mean": 0.48504703901748353,
+      "std": 0.06807799334441866
+    }
+  },
+  "fold_uncertainty": {
+    "mean_uncertainty": {
+      "mean": 0.07251791507005692,
+      "std": 0.01627009850377403
+    },
+    "uncertainty_error_spearman": {
+      "mean": 0.42081668298245384,
+      "std": 0.03863755333632223
+    },
+    "high_error_auroc": {
+      "mean": 0.8495626550489435,
+      "std": 0.017709444330008775
+    }
+  },
+  "selected_epochs": [
+    24,
+    9,
+    7,
+    48,
+    34
+  ],
+  "uncertainty_quintiles": [
+    {
+      "quintile": 1,
+      "n_samples": 217,
+      "uncertainty_min": 0.004356300816340861,
+      "uncertainty_mean": 0.020816567263841096,
+      "uncertainty_max": 0.028414333313862263,
+      "mae": 0.10863565380945756,
+      "rmse": 0.2053472596551418
+    },
+    {
+      "quintile": 2,
+      "n_samples": 217,
+      "uncertainty_min": 0.02848229246323354,
+      "uncertainty_mean": 0.03452149949287716,
+      "uncertainty_max": 0.04047973786888767,
+      "mae": 0.08687480741949562,
+      "rmse": 0.1179926473969296
+    },
+    {
+      "quintile": 3,
+      "n_samples": 217,
+      "uncertainty_min": 0.04053768440834286,
+      "uncertainty_mean": 0.04765688957288598,
+      "uncertainty_max": 0.055484328330475625,
+      "mae": 0.11574316637157732,
+      "rmse": 0.23253572670884784
+    },
+    {
+      "quintile": 4,
+      "n_samples": 217,
+      "uncertainty_min": 0.055856622058009564,
+      "uncertainty_mean": 0.07112999299929056,
+      "uncertainty_max": 0.09733388965665234,
+      "mae": 0.23978974910326048,
+      "rmse": 0.5018766450704467
+    },
+    {
+      "quintile": 5,
+      "n_samples": 216,
+      "uncertainty_min": 0.09736051307330679,
+      "uncertainty_mean": 0.1890291911819885,
+      "uncertainty_max": 0.49267961667219334,
+      "mae": 0.6038314995804557,
+      "rmse": 0.7959447621479272
+    }
+  ],
+  "risk_coverage": [
+    {
+      "coverage": 0.2,
+      "n_samples": 216,
+      "uncertainty_rmse": 0.2058138044579585,
+      "uncertainty_mae": 0.10901322985307926,
+      "random_rmse_mean": 0.4409103690418442,
+      "random_rmse_std": 0.045294973406287534,
+      "random_rmse_ci_low": 0.34973725700990127,
+      "random_rmse_ci_high": 0.5246655328478331,
+      "random_mae_mean": 0.2291036645333361,
+      "random_mae_ci_low": 0.18538578637603456,
+      "random_mae_ci_high": 0.2756608675385705,
+      "oracle_rmse": 0.019229264878340337,
+      "oracle_mae": 0.016437274878612965,
+      "uncertainty_rmse_reduction_vs_random": 0.5332071574882243,
+      "uncertainty_rmse_random_percentile": 0.0
+    },
+    {
+      "coverage": 0.4,
+      "n_samples": 433,
+      "uncertainty_rmse": 0.16765932515666854,
+      "uncertainty_mae": 0.09798002021928186,
+      "random_rmse_mean": 0.44549698683243366,
+      "random_rmse_std": 0.02752601427222839,
+      "random_rmse_ci_low": 0.3905191977632544,
+      "random_rmse_ci_high": 0.49551891496453043,
+      "random_mae_mean": 0.23108238591921668,
+      "random_mae_ci_low": 0.20200721450923187,
+      "random_mae_ci_high": 0.25772681141984743,
+      "oracle_rmse": 0.041047837451799025,
+      "oracle_mae": 0.03496434110429978,
+      "uncertainty_rmse_reduction_vs_random": 0.6236577797107956,
+      "uncertainty_rmse_random_percentile": 0.0
+    },
+    {
+      "coverage": 0.6,
+      "n_samples": 650,
+      "uncertainty_rmse": 0.1917740031445518,
+      "uncertainty_mae": 0.10389837756356765,
+      "random_rmse_mean": 0.4445323640957616,
+      "random_rmse_std": 0.018675228080879257,
+      "random_rmse_ci_low": 0.40693161523348503,
+      "random_rmse_ci_high": 0.47952778608371444,
+      "random_mae_mean": 0.23036907150875766,
+      "random_mae_ci_low": 0.21024304705057245,
+      "random_mae_ci_high": 0.2484632613541257,
+      "oracle_rmse": 0.06538400416080294,
+      "oracle_mae": 0.05540073565362837,
+      "uncertainty_rmse_reduction_vs_random": 0.5685938333541903,
+      "uncertainty_rmse_random_percentile": 0.0
+    },
+    {
+      "coverage": 0.8,
+      "n_samples": 867,
+      "uncertainty_rmse": 0.30090684005449236,
+      "uncertainty_mae": 0.1376352542656533,
+      "random_rmse_mean": 0.44648856234421086,
+      "random_rmse_std": 0.01107425634719132,
+      "random_rmse_ci_low": 0.42395876567850094,
+      "random_rmse_ci_high": 0.46599503574271056,
+      "random_mae_mean": 0.23107555261087276,
+      "random_mae_ci_low": 0.21968197120884536,
+      "random_mae_ci_high": 0.2418595471162355,
+      "oracle_rmse": 0.10558804829915544,
+      "oracle_mae": 0.08493540118284403,
+      "uncertainty_rmse_reduction_vs_random": 0.3260592422017865,
+      "uncertainty_rmse_random_percentile": 0.0
+    },
+    {
+      "coverage": 1.0,
+      "n_samples": 1084,
+      "uncertainty_rmse": 0.4457728352474758,
+      "uncertainty_mae": 0.23063101167352493,
+      "random_rmse_mean": 0.4457728352474757,
+      "random_rmse_std": 1.666167829227528e-16,
+      "random_rmse_ci_low": 0.44577283524747585,
+      "random_rmse_ci_high": 0.44577283524747585,
+      "random_mae_mean": 0.23063101167352504,
+      "random_mae_ci_low": 0.23063101167352495,
+      "random_mae_ci_high": 0.23063101167352495,
+      "oracle_rmse": 0.44577283524747585,
+      "oracle_mae": 0.23063101167352495,
+      "uncertainty_rmse_reduction_vs_random": 0.0,
+      "uncertainty_rmse_random_percentile": NaN
+    }
+  ]
+}

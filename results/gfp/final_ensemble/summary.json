@@ -1,0 +1,71 @@
+{
+  "stage": "Step 8-5",
+  "dataset": "GFP_AEQVI_Sarkisyan_2016",
+  "label_policy": {
+    "training_labels": "GFP single-mutant DMS_score only",
+    "multi_mutant_labels_loaded": false,
+    "candidate_prediction_table_contains_dms_score": false
+  },
+  "training": {
+    "n_labeled_single_mutants": 1084,
+    "input_shape": [
+      1084,
+      2880
+    ],
+    "target_shape": [
+      1084
+    ],
+    "epochs": 24,
+    "epoch_source": "median of Step 8-4 outer-fold selected epochs [24, 9, 7, 48, 34]",
+    "ensemble_size": 5,
+    "member_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "model": "BranchFusionMLP",
+    "parameter_count_per_member": 196929,
+    "representation": {
+      "wt_context_mean": 960,
+      "delta_local_sum": 960,
+      "delta_global": 960,
+      "total": 2880
+    }
+  },
+  "hidden_candidate_pool": {
+    "n_multi_mutants": 50630,
+    "input_shape": [
+      50630,
+      2880
+    ],
+    "member_prediction_shape": [
+      50630,
+      5
+    ],
+    "mu_shape": [
+      50630
+    ],
+    "sigma_shape": [
+      50630
+    ]
+  },
+  "prediction_distribution": {
+    "mu_min": -2.874523162841797,
+    "mu_mean": 3.302201271057129,
+    "mu_median": 3.5804147720336914,
+    "mu_max": 4.109147071838379,
+    "sigma_min": 0.0027429708279669285,
+    "sigma_mean": 0.155466228723526,
+    "sigma_median": 0.0844087153673172,
+    "sigma_max": 1.5041364431381226
+  },
+  "uncertainty_definition": "Sample standard deviation (ddof=1) across five independently trained BranchFusionMLP predictions in original GFP DMS-score units. This is a relative epistemic disagreement signal, not a calibrated confidence interval.",
+  "artifacts": {
+    "candidate_predictions": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/final_ensemble/multi_mutant_predictions.csv",
+    "member_predictions": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/final_ensemble/multi_mutant_member_predictions.npy",
+    "scalers": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/final_ensemble/scalers.pkl",
+    "checkpoint_directory": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/final_ensemble/checkpoints"
+  }
+}

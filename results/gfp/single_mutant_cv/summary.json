@@ -1,0 +1,78 @@
+{
+  "protocol": {
+    "dataset": "GFP_AEQVI_Sarkisyan_2016",
+    "training_population": "1084 single mutants only",
+    "multi_mutant_label_usage": "None. Multi-mutant DMS_score is never loaded.",
+    "input_shape": [
+      1084,
+      1920
+    ],
+    "feature": "[WT context mean, local perturbation sum]",
+    "outer_cv": "5-fold shuffled KFold, seed 42",
+    "mlp_epoch_selection": "15% validation split inside outer-train only; fresh model refit on full outer-train for selected epoch"
+  },
+  "ridge": {
+    "alpha": 1.0,
+    "fold": {
+      "spearman": {
+        "mean": 0.314762042410996,
+        "std": 0.07483606188005039
+      },
+      "rmse": {
+        "mean": 0.7208810965455703,
+        "std": 0.021344444928534788
+      },
+      "mae": {
+        "mean": 0.5406288716618203,
+        "std": 0.02051258111285885
+      },
+      "r2": {
+        "mean": -0.3941137850411097,
+        "std": 0.3107758605822548
+      }
+    },
+    "global_oof": {
+      "spearman": 0.32114439614595414,
+      "rmse": 0.7211394294041406,
+      "mae": 0.5406267130150049,
+      "r2": -0.34463107847529173
+    }
+  },
+  "mlp": {
+    "architecture": "1920 -> 512 -> 128 -> 1",
+    "dropout": 0.2,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "fold": {
+      "spearman": {
+        "mean": 0.365633435444925,
+        "std": 0.06174597674095986
+      },
+      "rmse": {
+        "mean": 0.5715831691713561,
+        "std": 0.04492276186539455
+      },
+      "mae": {
+        "mean": 0.4324697213478347,
+        "std": 0.03497865127994226
+      },
+      "r2": {
+        "mean": 0.13202697323388382,
+        "std": 0.16090702091708006
+      }
+    },
+    "global_oof": {
+      "spearman": 0.3619629863914197,
+      "rmse": 0.5730294433156441,
+      "mae": 0.43249261554833585,
+      "r2": 0.15097879775952217
+    },
+    "selected_epochs": [
+      19,
+      16,
+      13,
+      78,
+      6
+    ]
+  }
+}

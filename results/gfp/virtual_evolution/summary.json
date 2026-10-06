@@ -1,0 +1,79 @@
+{
+  "stage": "Step 8-6",
+  "protocol": {
+    "type": "retrospective pool-based batch active learning",
+    "initial_labeled_set": "1084 GFP single mutants",
+    "candidate_pool": "50630 GFP multi-mutants",
+    "initial_labels_count_toward_budget": false,
+    "budget": 100,
+    "batch_size": 20,
+    "rounds": 5,
+    "policies": {
+      "random": "uniform random",
+      "greedy": "mu",
+      "ucb": "mu + 1.0 * sigma",
+      "conservative": "mu - 1.0 * sigma"
+    },
+    "simulation_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ensemble": {
+      "architecture": "BranchFusionMLP: WT[960]->64; DeltaLocal[960]->64; DeltaGlobal[960]->64; concat[192]->64->1",
+      "members": 5,
+      "epochs_per_member": 24,
+      "member_base_seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "scaler_refit_each_round": true,
+      "ensemble_retrained_each_round": true
+    }
+  },
+  "leakage_control": {
+    "policy_receives_dms_score": false,
+    "policy_receives_only": [
+      "mutant",
+      "mutation_count",
+      "predicted_fitness_mu",
+      "uncertainty_sigma"
+    ],
+    "label_reveal": "HiddenOracle.reveal() is called only after a batch has been selected.",
+    "full_hidden_labels_used_for": "retrospective evaluation metrics only"
+  },
+  "evaluation": {
+    "initial_best_single": 4.11357579525,
+    "global_best_multi": 4.12310906338,
+    "top_percent_fraction": 0.01,
+    "top_percent_count": 507,
+    "top_percent_threshold": 3.86828668658,
+    "top_k_values": [
+      10,
+      50,
+      100
+    ]
+  },
+  "artifacts": {
+    "acquisition_history": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/acquisition_history.csv",
+    "round_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/round_metrics.csv",
+    "aggregate_metrics": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/aggregate_metrics.csv",
+    "final_policy_summary": "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/final_policy_summary.csv",
+    "figures": [
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/figures/best_acquired_multi_vs_budget.png",
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/figures/top5_acquired_mean_vs_budget.png",
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/figures/top100_recovery_vs_budget.png",
+      "/var/workspace/chaewon/protein-virtual-evolution/results/gfp/virtual_evolution/figures/top1pct_hit_rate_vs_budget.png"
+    ]
+  }
+}
