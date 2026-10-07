@@ -607,23 +607,35 @@ results/cross_protein/
 
 ```text
 protein-virtual-evolution/
-├── configs/
+├── LICENSE
+├── README.md
+├── README_ko.md
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── splits/
+│   ├── raw/                         # ProteinGym assay, CV fold, reference 원본
+│   └── processed/                   # 전처리 variant 및 ESM-C feature
 ├── docs/
-├── notebooks/
+│   ├── cross_protein_validation_final.md
+│   ├── gfp_structural_functional_validation.md
+│   ├── gfp_virtual_evolution_results.md
+│   └── uncertainty_results.md
 ├── results/
-│   ├── tem1/
+│   ├── cross_protein/               # 재현 가능한 단백질 간 비교 요약
 │   ├── gfp/
-│   ├── tpmt/
-│   └── cross_protein/
-├── scripts/
-└── src/
-    ├── data/
-    ├── evaluation/
-    └── models/
+│   │   ├── architecture_ablation/
+│   │   ├── deep_ensemble_uncertainty/
+│   │   ├── final_ensemble/
+│   │   ├── mutation_graph_audit/
+│   │   ├── virtual_evolution/
+│   │   ├── esm3_generation/
+│   │   ├── esm3_scoring/
+│   │   ├── esm3_shortlist/
+│   │   ├── structural_plausibility/
+│   │   ├── structural_plausibility_replicated/
+│   │   ├── colabfold_structural_validation/
+│   │   └── functional_site_preservation/
+│   ├── tem1/                        # baseline, ablation, 일반화, 불확실성 결과
+│   └── tpmt/                        # Branch Fusion CV 및 ensemble 불확실성 결과
+└── scripts/                         # 전처리, 모델링, 설계, 검증, 결과 집계
 ```
 
 ---

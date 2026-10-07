@@ -601,23 +601,35 @@ This prevents manual metric transcription and keeps summary results traceable to
 
 ```text
 protein-virtual-evolution/
-├── configs/
+├── LICENSE
+├── README.md
+├── README_ko.md
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── splits/
+│   ├── raw/                         # ProteinGym assays, CV folds, and references
+│   └── processed/                   # Prepared variants and ESM-C features
 ├── docs/
-├── notebooks/
+│   ├── cross_protein_validation_final.md
+│   ├── gfp_structural_functional_validation.md
+│   ├── gfp_virtual_evolution_results.md
+│   └── uncertainty_results.md
 ├── results/
-│   ├── tem1/
+│   ├── cross_protein/               # Reproducible cross-protein summaries
 │   ├── gfp/
-│   ├── tpmt/
-│   └── cross_protein/
-├── scripts/
-└── src/
-    ├── data/
-    ├── evaluation/
-    └── models/
+│   │   ├── architecture_ablation/
+│   │   ├── deep_ensemble_uncertainty/
+│   │   ├── final_ensemble/
+│   │   ├── mutation_graph_audit/
+│   │   ├── virtual_evolution/
+│   │   ├── esm3_generation/
+│   │   ├── esm3_scoring/
+│   │   ├── esm3_shortlist/
+│   │   ├── structural_plausibility/
+│   │   ├── structural_plausibility_replicated/
+│   │   ├── colabfold_structural_validation/
+│   │   └── functional_site_preservation/
+│   ├── tem1/                        # Baselines, ablations, generalization, uncertainty
+│   └── tpmt/                        # Branch-fusion CV and ensemble uncertainty
+└── scripts/                         # Preparation, modeling, design, validation, aggregation
 ```
 
 ---
