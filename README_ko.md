@@ -170,7 +170,7 @@ Random / Greedy / UCB / Conservative acquisition
 
 ## Multi-Mutant 표현
 
-\(K\)개의 mutation을 가진 변이체에 대해:
+$K$개의 mutation을 가진 변이체에 대해:
 
 ```text
 WT context
@@ -300,7 +300,7 @@ $$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
 $$
 
-uncertainty-aware policy에서는 \(\beta=1\)을 사용했습니다.
+uncertainty-aware policy에서는 $\beta=1$을 사용했습니다.
 
 각 round에서 선택된 candidate의 label을 hidden oracle을 통해 공개하고, labeled set에 추가한 뒤 ensemble을 다시 학습했습니다.
 
@@ -361,7 +361,7 @@ seed 대비 μ−σ 개선              : 29 / 47 (61.7%)
 
 생성된 candidate는 frozen ESM-C + 5-member Deep Ensemble pipeline으로 다시 평가했습니다.
 
-\(N=47\)개 후보에 대해:
+$N=47$개 후보에 대해:
 
 ```text
 Generated sequences         [47,238 aa]

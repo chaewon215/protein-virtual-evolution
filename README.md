@@ -170,7 +170,7 @@ Random / Greedy / UCB / Conservative acquisition
 
 ## Multi-Mutant Representation
 
-For a variant with \(K\) mutations:
+For a variant with $K$ mutations:
 
 ```text
 WT context
@@ -300,7 +300,7 @@ $$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
 $$
 
-with \(\beta=1\) for uncertainty-aware policies.
+with $\beta=1$ for uncertainty-aware policies.
 
 At each round, selected candidates were revealed through a hidden oracle and added to the labeled set before retraining the ensemble.
 
@@ -361,7 +361,7 @@ Diversity-aware shortlist      : 6
 
 Candidates were rescored using the frozen ESM-C + 5-member Deep Ensemble pipeline.
 
-For \(N=47\) generated candidates:
+For $N=47$ generated candidates:
 
 ```text
 Generated sequences         [47,238 aa]
