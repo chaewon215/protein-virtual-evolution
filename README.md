@@ -288,17 +288,17 @@ Acquisition budget:
 
 Policies were fixed before multi-mutant labels were revealed:
 
-\[
+$$
 \text{Greedy}(x)=\mu(x)
-\]
+$$
 
-\[
+$$
 \text{UCB}(x)=\mu(x)+\sigma(x)
-\]
+$$
 
-\[
+$$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
-\]
+$$
 
 with \(\beta=1\) for uncertainty-aware policies.
 
@@ -339,9 +339,9 @@ After retrospective validation of the fitness predictor and uncertainty signal, 
 
 High-confidence seed variants were ranked using the conservative acquisition score:
 
-\[
+$$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
-\]
+$$
 
 For each selected seed:
 

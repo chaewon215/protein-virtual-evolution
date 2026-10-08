@@ -288,17 +288,17 @@ Acquisition budget:
 
 multi-mutant label을 보기 전에 acquisition policy를 고정했습니다.
 
-\[
+$$
 \text{Greedy}(x)=\mu(x)
-\]
+$$
 
-\[
+$$
 \text{UCB}(x)=\mu(x)+\sigma(x)
-\]
+$$
 
-\[
+$$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
-\]
+$$
 
 uncertainty-aware policy에서는 \(\beta=1\)을 사용했습니다.
 
@@ -339,9 +339,9 @@ fitness predictor와 uncertainty signal의 회고적 검증 이후, 측정된 Pr
 
 high-confidence seed variant는 conservative acquisition score를 기준으로 정렬했습니다.
 
-\[
+$$
 \text{Conservative}(x)=\mu(x)-\sigma(x)
-\]
+$$
 
 각 seed에 대해:
 
